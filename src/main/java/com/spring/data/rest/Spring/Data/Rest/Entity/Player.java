@@ -1,0 +1,114 @@
+package com.spring.data.rest.Spring.Data.Rest.Entity;
+
+
+import java.util.Date;
+import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+import javax.persistence.Table;
+import javax.persistence.NamedQuery;
+
+@Entity  // ROW Mapping (create database/schema)
+//@Table(name="Player")
+public class Player {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   // @Column(name="ID")
+    private int ID; // auto generated column name on new row insertion
+
+  //  @Column(name="Name")
+    private String name;
+
+    private int age;
+
+    private String nationality;
+
+    private Date dob;
+
+    private int designation;
+
+    public Player(){}
+
+    public Player(int ID, String name, int age, String nationality, Date dob, int designation) {
+        this.ID = ID;
+        this.name = name;
+        this.age = age;
+        this.nationality = nationality;
+        this.dob = dob;
+        this.designation = designation;
+    }
+
+    public Player(String name, int age, String nationality, Date dob, int designation) {
+        this.name = name;
+        this.age = age;
+        this.nationality = nationality;
+        this.dob = dob;
+        this.designation = designation;
+    }
+
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+
+    public int getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(int designation) {
+        this.designation = designation;
+    }
+
+//    @Override
+//    public String toString() {
+//        return "Player{" +
+//                "ID=" + ID +
+//                ", name='" + name + '\'' +
+//                ", age=" + age +
+//                ", nationality='" + nationality + '\'' +
+//                ", dob=" + dob +
+//                ", designation=" + designation +
+//                '}';
+//    }
+
+
+}
